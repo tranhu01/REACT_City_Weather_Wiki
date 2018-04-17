@@ -44,7 +44,9 @@ class App extends React.Component {
 
 
         if (city && country) {
-            //console.log(data)
+            console.log("Before fetch Weather")
+            console.log(data)
+            console.log("After fetch Weather")
 
             this.setState({
                 temperature: data.main.temp,
@@ -77,7 +79,7 @@ class App extends React.Component {
 
     getInfo = async (event) => {
         event.preventDefault();
-        //console.log("Before Fetch")
+        console.log("Before Fetch Wiki")
 
         const city = event.target.elements.city.value;
 
@@ -85,8 +87,8 @@ class App extends React.Component {
         const data2 = await api_call_wiki.json();
 
         if (city) {
-            //console.log(data2)
-            //console.log("After Fetch")
+            console.log(data2)
+            console.log("After Fetch Wiki")
             //got the data
 
             this.setState({
